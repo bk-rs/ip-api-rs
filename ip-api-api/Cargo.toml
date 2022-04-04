@@ -1,0 +1,15 @@
+[package]
+name = "ip-api-api"
+version = "0.0.0"
+authors = ["vkill <vkill.net@gmail.com>"]
+edition = "2021"
+description = "IP-API.com Api"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/bk-rs/ip-api-rs"
+homepage = "https://github.com/bk-rs/ip-api-rs"
+documentation = "https://docs.rs/ip-api-api"
+keywords = []
+categories = []
+readme = "README.md"
+
+[dependencies]
