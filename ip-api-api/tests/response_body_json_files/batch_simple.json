@@ -1,0 +1,40 @@
+[
+    {
+        "country": "США",
+        "countryCode": "US",
+        "city": "Чикаго",
+        "query": "208.80.152.201"
+    },
+    {
+        "status": "success",
+        "country": "United States",
+        "countryCode": "US",
+        "region": "VA",
+        "regionName": "Virginia",
+        "city": "Ashburn",
+        "zip": "20149",
+        "lat": 39.03,
+        "lon": -77.5,
+        "timezone": "America/New_York",
+        "isp": "Google LLC",
+        "org": "Google Public DNS",
+        "as": "AS15169 Google LLC",
+        "query": "8.8.8.8"
+    },
+    {
+        "status": "success",
+        "country": "Canada",
+        "countryCode": "CA",
+        "region": "QC",
+        "regionName": "Quebec",
+        "city": "Montreal",
+        "zip": "H3G",
+        "lat": 45.4995,
+        "lon": -73.5848,
+        "timezone": "America/Toronto",
+        "isp": "Le Groupe Videotron Ltee",
+        "org": "Videotron Ltee",
+        "as": "AS5769 Videotron Telecom Ltee",
+        "query": "24.48.0.1"
+    }
+]

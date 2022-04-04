@@ -13,3 +13,14 @@ categories = []
 readme = "README.md"
 
 [dependencies]
+http-api-client-endpoint = { version = "0.2" }
+
+serde = { version = "1.0", default-features = false, features = ["std", "derive"] }
+chrono = { version = "0.4", default-features = false, features = ["serde"] }
+chrono-tz = { version = "0.6", default-features = false }
+serde-enum-str = { version = "0.2", default-features = false }
+url = { version = "2.2", default-features = false }
+serde-field-default = { version = "0.1", default-features = false, features = ["std", "chrono", "chrono-tz"] }
+serde-field-with = { version = "0.1", default-features = false, features = ["alloc"] }
+
+serde_json = { version = "1.0", default-features = false, features = ["std"] }
