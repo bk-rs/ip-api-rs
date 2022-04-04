@@ -1,0 +1,20 @@
+[package]
+name = "ip-api-api-demo"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "json"
+path = "src/json.rs"
+
+[[bin]]
+name = "batch"
+path = "src/batch.rs"
+
+[dependencies]
+ip-api-api = { path = ".." }
+
+http-api-isahc-client = { version = "0.2" }
+
+futures-lite = { version = "1.12" }
+pretty_env_logger = { version = "0.4" }
