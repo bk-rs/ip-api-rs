@@ -5,6 +5,8 @@ use std::net::IpAddr;
 
 use chrono::{DateTime, Utc};
 use chrono_tz::Tz;
+use continent_code::ContinentCode;
+use country_code::CountryCode;
 use http_api_client_endpoint::{
     http::{header::ACCEPT, Method},
     Body, Endpoint, Request, Response, MIME_APPLICATION_JSON,
@@ -180,12 +182,12 @@ pub struct JsonResponseBodySuccessJson {
     #[serde(default)]
     pub continent: Box<str>,
     #[serde(default, rename = "continentCode")]
-    pub continent_code: Box<str>,
+    pub continent_code: ContinentCode,
     //
     #[serde(default)]
     pub country: Box<str>,
     #[serde(default, rename = "countryCode")]
-    pub country_code: Box<str>,
+    pub country_code: CountryCode,
     #[serde(default, rename = "countryCode3")]
     pub country_code3: Box<str>,
     //
@@ -290,8 +292,8 @@ mod tests {
         )) {
             Ok(JsonResponseBodyJson::Success(ok_json)) => {
                 assert_eq!(ok_json.query.to_string(), "24.48.0.1");
-                assert_eq!(ok_json.continent_code, "".into());
-                assert_eq!(ok_json.country_code, "CA".into());
+                assert_eq!(ok_json.continent_code, ContinentCode::AS);
+                assert_eq!(ok_json.country_code, CountryCode::CA);
             }
             ret => panic!("{:?}", ret),
         }
@@ -301,8 +303,8 @@ mod tests {
         )) {
             Ok(JsonResponseBodyJson::Success(ok_json)) => {
                 assert_eq!(ok_json.query.to_string(), "24.48.0.1");
-                assert_eq!(ok_json.continent_code, "NA".into());
-                assert_eq!(ok_json.country_code, "CA".into());
+                assert_eq!(ok_json.continent_code, ContinentCode::NA);
+                assert_eq!(ok_json.country_code, CountryCode::CA);
             }
             ret => panic!("{:?}", ret),
         }
@@ -312,8 +314,8 @@ mod tests {
         )) {
             Ok(JsonResponseBodyJson::Success(ok_json)) => {
                 assert_eq!(ok_json.query.to_string(), "24.48.0.1");
-                assert_eq!(ok_json.continent_code, "NA".into());
-                assert_eq!(ok_json.country_code, "CA".into());
+                assert_eq!(ok_json.continent_code, ContinentCode::NA);
+                assert_eq!(ok_json.country_code, CountryCode::CA);
             }
             ret => panic!("{:?}", ret),
         }

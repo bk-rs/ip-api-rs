@@ -22,5 +22,7 @@ serde-enum-str = { version = "0.2", default-features = false }
 url = { version = "2.2", default-features = false }
 serde-field-default = { version = "0.1", default-features = false, features = ["std", "chrono", "chrono-tz"] }
 serde-field-with = { version = "0.1", default-features = false, features = ["alloc"] }
+continent-code = { version = "0.4", default-features = false, features = ["std", "serde"] }
+country-code = { version = "0.3", default-features = false, features = ["std", "serde"] }
 
 serde_json = { version = "1.0", default-features = false, features = ["std"] }
