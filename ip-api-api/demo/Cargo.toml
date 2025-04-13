@@ -14,7 +14,7 @@ path = "src/batch.rs"
 [dependencies]
 ip-api-api = { path = ".." }
 
-http-api-isahc-client = { version = "0.2" }
+http-api-reqwest-client = { version = "0.3" }
 
-futures-lite = { version = "1.12" }
-pretty_env_logger = { version = "0.4" }
+futures-lite = { version = "2" }
+pretty_env_logger = { version = "0.5" }
