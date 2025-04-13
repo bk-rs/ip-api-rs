@@ -16,5 +16,5 @@ ip-api-api = { path = ".." }
 
 http-api-reqwest-client = { version = "0.3" }
 
-futures-lite = { version = "2" }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 pretty_env_logger = { version = "0.5" }
