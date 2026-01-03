@@ -3,11 +3,11 @@
 use core::ops::Deref;
 
 use http_api_client_endpoint::{
+    Body, Endpoint, MIME_APPLICATION_JSON, Request, Response,
     http::{
-        header::{ACCEPT, CONTENT_TYPE},
         Method,
+        header::{ACCEPT, CONTENT_TYPE},
     },
-    Body, Endpoint, Request, Response, MIME_APPLICATION_JSON,
 };
 use serde::Deserialize;
 use serde_json::{Map, Value};
@@ -15,10 +15,10 @@ use url::Url;
 
 use crate::{
     endpoints::{
-        common::EndpointError, helper::get_n_from_headers_by_key, json::JsonResponseBodyJson,
-        URL_BASE, URL_BASE_PRO,
+        URL_BASE, URL_BASE_PRO, common::EndpointError, helper::get_n_from_headers_by_key,
+        json::JsonResponseBodyJson,
     },
-    objects::rate_limit::{RateLimit, RESPONSE_HEADER_KEY_X_RL, RESPONSE_HEADER_KEY_X_TTL},
+    objects::rate_limit::{RESPONSE_HEADER_KEY_X_RL, RESPONSE_HEADER_KEY_X_TTL, RateLimit},
     types::lang::Lang,
 };
 

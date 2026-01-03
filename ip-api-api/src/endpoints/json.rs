@@ -8,16 +8,16 @@ use chrono_tz::Tz;
 use continent_code::ContinentCode;
 use country_code::CountryCode;
 use http_api_client_endpoint::{
-    http::{header::ACCEPT, Method},
-    Body, Endpoint, Request, Response, MIME_APPLICATION_JSON,
+    Body, Endpoint, MIME_APPLICATION_JSON, Request, Response,
+    http::{Method, header::ACCEPT},
 };
-use serde::{de, Deserialize, Deserializer};
+use serde::{Deserialize, Deserializer, de};
 use serde_json::{Map, Value};
 use url::Url;
 
 use crate::{
-    endpoints::{common::EndpointError, helper::get_n_from_headers_by_key, URL_BASE, URL_BASE_PRO},
-    objects::rate_limit::{RateLimit, RESPONSE_HEADER_KEY_X_RL, RESPONSE_HEADER_KEY_X_TTL},
+    endpoints::{URL_BASE, URL_BASE_PRO, common::EndpointError, helper::get_n_from_headers_by_key},
+    objects::rate_limit::{RESPONSE_HEADER_KEY_X_RL, RESPONSE_HEADER_KEY_X_TTL, RateLimit},
     types::lang::Lang,
 };
 
