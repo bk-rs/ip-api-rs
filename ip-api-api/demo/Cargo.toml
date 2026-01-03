@@ -14,7 +14,7 @@ path = "src/batch.rs"
 [dependencies]
 ip-api-api = { path = ".." }
 
-http-api-reqwest-client = { version = "0.3" }
+http-api-reqwest-client = { version = "0.4" }
 
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 pretty_env_logger = { version = "0.5" }
