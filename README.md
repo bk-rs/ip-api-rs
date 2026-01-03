@@ -8,3 +8,9 @@ cargo fmt -- --check
 
 cargo test-all-features -- --nocapture
 ```
+
+## Publish
+
+```shell
+cargo publish --workspace
+```
